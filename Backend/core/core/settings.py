@@ -103,18 +103,27 @@ WSGI_APPLICATION = 'core.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'mssql',
+#         'NAME': 'Hotels',
+#         'HOST': 'hotel-data.database.windows.net',
+#         'USER': 'django_user',
+#         'PASSWORD': 'Mtfbwya01.$',
+#         'OPTIONS': {
+#             'driver': 'ODBC Driver 17 for SQL Server',
+#         },
+#     },
+# }
+
 DATABASES = {
     'default': {
-        'ENGINE': 'mssql',
-        'NAME': 'Hotels',
-        'HOST': 'hotel-data.database.windows.net',
-        'USER': 'django_user',
-        'PASSWORD': 'Mtfbwya01.$',
-        'OPTIONS': {
-            'driver': 'ODBC Driver 17 for SQL Server',
-        },
-    },
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
+    }
 }
+
+
 
 AUTH_USER_MODEL = 'main.HotelUser'
 
