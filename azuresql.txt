@@ -1,0 +1,6 @@
+pip install django-mssql-backend
+
+
+# modified DATABASES in settings.py to match sql server credentials
+
+#using sql server management studio to see sql server
